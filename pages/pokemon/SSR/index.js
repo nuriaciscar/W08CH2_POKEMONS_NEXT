@@ -1,10 +1,13 @@
+import Image from "next/image";
 const SSRPage = ({ pokemonsList }) => {
   return (
     <>
       <h1>Hello</h1>
       <ul>
         {pokemonsList.map((pokemon) => (
-          <li>{pokemon.name}</li>
+          <li key={pokemonsList.id}>
+            <p>{pokemon.name} </p>
+          </li>
         ))}
       </ul>
     </>
