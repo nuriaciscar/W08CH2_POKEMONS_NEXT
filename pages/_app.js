@@ -6,10 +6,19 @@ const MyApp = function ({ Component, pageProps }) {
     <>
       <ul>
         <li>
-          <Link href="/pokemon">Pokemon</Link>
+          <Link href="/home">Home</Link>
+        </li>
+        <li>
+          <Link href="/pokemon/CSR">Pokemon</Link>
+        </li>
+        <li>
           <Link href="/pokemon/SSR">Pokemon SSR</Link>
         </li>
+        <li>
+          <Link href="/pokemon/CSR">Pokemon CSR</Link>
+        </li>
       </ul>
+      <Component {...pageProps} />
     </>
   );
 };
