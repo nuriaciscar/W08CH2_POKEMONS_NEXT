@@ -1,5 +1,5 @@
 {
-  "extends": ["plugin:react/recommended", "airbnb", "next/core-web-vitals"],
+  "extends": ["next/core-web-vitals", "prettier"],
   "rules": {
     "no-param-reassign": "off",
     "no-plusplus": "off",
