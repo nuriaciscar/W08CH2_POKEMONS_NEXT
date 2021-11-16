@@ -27,8 +27,6 @@ const ISRPage = ({ pokemonsList }) => {
   );
 };
 
-export default ISRPage;
-
 export const getStaticProps = async () => {
   const response = await fetch("https://oleguer-pokemon.herokuapp.com/pokemon");
   const pokemonsList = await response.json();
@@ -38,3 +36,5 @@ export const getStaticProps = async () => {
     revalidate: 20,
   };
 };
+
+export default ISRPage;
