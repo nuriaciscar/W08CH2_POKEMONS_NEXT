@@ -6,7 +6,7 @@ const Home = function () {
   useEffect(() => {
     const getPokemons = async () => {
       const response = await fetch(
-        "https://pokeapi-menchu.herokuapp.com/pokemon"
+        "https://oleguer-pokemon.herokuapp.com/pokemon"
       );
       const pokemonsList = await response.json();
       setPokemons(pokemonsList);
@@ -19,7 +19,17 @@ const Home = function () {
       <h1>Pokemons</h1>
       <ul>
         {pokemons &&
-          pokemons.map((pokemon) => <li key={pokemon.id}>{pokemon.name}</li>)}
+          pokemons.map((pokemon) => (
+            <li key={pokemon.id}>
+              {pokemon.name}
+              <img
+                src={pokemon.sprites.other.dream_world.front_default}
+                alt="{`Pokemon ${pokemon.name}`}"
+                width={200}
+                height={200}
+              />
+            </li>
+          ))}
       </ul>
     </>
   );
