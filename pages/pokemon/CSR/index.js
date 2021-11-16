@@ -6,7 +6,7 @@ const Home = function () {
   useEffect(() => {
     const getPokemons = async () => {
       const response = await fetch(
-        "https://pokeapi-menchu.herokuapp.com/pokemon"
+        "https://oleguer-pokemon.herokuapp.com/pokemon"
       );
       const pokemonsList = await response.json();
       setPokemons(pokemonsList);

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const SSGPage = ({ pokemonsList }) => {
+const ISRPage = ({ pokemonsList }) => {
   return (
     <>
       <ul className="pokemons">
@@ -8,7 +8,7 @@ const SSGPage = ({ pokemonsList }) => {
           <li key={pokemon.id}>
             <Link
               href={{
-                pathname: "SSG/[id]",
+                pathname: "ISR/[id]",
                 query: { id: pokemon.id },
               }}
             >
@@ -27,7 +27,7 @@ const SSGPage = ({ pokemonsList }) => {
   );
 };
 
-export default SSGPage;
+export default ISRPage;
 
 export const getStaticProps = async () => {
   const response = await fetch("https://oleguer-pokemon.herokuapp.com/pokemon");
@@ -35,5 +35,6 @@ export const getStaticProps = async () => {
 
   return {
     props: { pokemonsList },
+    revalidate: 20,
   };
 };
