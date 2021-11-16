@@ -3,8 +3,7 @@ import Link from "next/link";
 const SSRPage = ({ pokemonsList }) => {
   return (
     <>
-      <h1>Hello</h1>
-      <ul>
+      <ul className="pokemons">
         {pokemonsList.map((pokemon) => (
           <li key={pokemon.id}>
             <Link

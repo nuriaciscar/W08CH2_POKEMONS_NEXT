@@ -3,8 +3,7 @@ import Link from "next/link";
 const SSGPage = ({ pokemonsList }) => {
   return (
     <>
-      <h1>Hello</h1>
-      <ul>
+      <ul className="pokemons">
         {pokemonsList.map((pokemon) => (
           <li key={pokemon.id}>
             <Link
@@ -15,6 +14,12 @@ const SSGPage = ({ pokemonsList }) => {
             >
               {pokemon.name}
             </Link>
+            <img
+              src={pokemon.sprites.other.dream_world.front_default}
+              alt="{`Pokemon ${pokemon.name}`}"
+              width={200}
+              height={200}
+            />
           </li>
         ))}
       </ul>

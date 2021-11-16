@@ -19,17 +19,7 @@ const Home = function () {
       <h1>Pokemons</h1>
       <ul>
         {pokemons &&
-          pokemons.map((pokemon) => (
-            <li key={pokemon.id}>
-              {pokemon.name}
-              <img
-                src={pokemon.sprites.other.dream_world.front_default}
-                alt="{`Pokemon ${pokemon.name}`}"
-                width={200}
-                height={200}
-              />
-            </li>
-          ))}
+          pokemons.map((pokemon) => <li key={pokemon.id}>{pokemon.name}</li>)}
       </ul>
     </>
   );
