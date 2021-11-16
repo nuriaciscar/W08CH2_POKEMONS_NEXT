@@ -17,6 +17,9 @@ const MyApp = function ({ Component, pageProps }) {
         <li>
           <Link href="/pokemon/SSG">Pokemon SSG</Link>
         </li>
+        <li>
+          <Link href="/pokemon/ISR">Pokemon ISR</Link>
+        </li>
       </ul>
       <Component {...pageProps} />
     </>
