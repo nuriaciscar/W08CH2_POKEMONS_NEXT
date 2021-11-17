@@ -27,14 +27,14 @@ const ISRPage = ({ pokemonsList }) => {
   );
 };
 
-export default ISRPage;
-
 export const getStaticProps = async () => {
   const response = await fetch("https://oleguer-pokemon.herokuapp.com/pokemon");
   const pokemonsList = await response.json();
 
   return {
     props: { pokemonsList },
-    revalidate: 20,
+    // revalidate: 20,
   };
 };
+
+export default ISRPage;
