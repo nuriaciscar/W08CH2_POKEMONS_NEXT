@@ -1,10 +1,10 @@
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 
 const Pokemon = ({ pokemon }) => {
-  const router = useRouter();
-  if (router.isFallback) {
-    return "Loading...";
-  }
+  // const router = useRouter();
+  // if (router.isFallback) {
+  //   return "Loading...";
+  // }
 
   return (
     <>
